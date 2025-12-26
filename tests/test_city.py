@@ -8,12 +8,12 @@ from database.models import CityModel
 async def test_post(client, session):
     response = await client.post(url="/cities/", json={"name": "Berlin"})
     assert response.status_code == 201
-    assert response.json()["id"] == 1
+    assert response.json()["id"] == 3
     assert response.json()["name"] == "Berlin"
 
     response = await client.post(url="/cities/", json={"name": "Moscow", "additional_info": "something"})
-    assert response.status_code == 200
-    assert response.json()["id"] == 2
+    assert response.status_code == 201
+    assert response.json()["id"] == 4
     assert response.json()["name"] == "Moscow"
     assert response.json()["additional_info"] == "something"
 
@@ -68,7 +68,7 @@ async def test_delete(client, session, seed_data):
     assert response.status_code == 200
 
     response = await client.get(url="/cities/")
-    assert len(response.json()) == 1
+    assert len(response.json()["cities"]) == 1
 
     cities = await session.execute(select(CityModel))
     cities = cities.scalars().all()

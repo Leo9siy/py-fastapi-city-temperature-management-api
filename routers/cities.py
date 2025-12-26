@@ -50,7 +50,7 @@ async def get_city(
 )
 async def update_city(
         rep: city_rep,
-        city_id,
+        city_id: int,
         city_data: CityCreateSchema
 ):
     return await rep.update_city(city_id, city_data)
