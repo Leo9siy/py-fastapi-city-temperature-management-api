@@ -30,4 +30,4 @@ class Temperature(Base, IdMixin):
     city: Mapped["CityModel"] = relationship("CityModel", back_populates="temperatures")
 
     date_time: Mapped[datetime] = mapped_column(DateTime(), nullable=False, default=datetime.now)
-    temperature: Mapped[float] = mapped_column(Float, nullable=False)
+    temperature: Mapped[float] = mapped_column(Float, nullable=True)

@@ -5,7 +5,7 @@ from pydantic import BaseModel
 
 
 class TempSchema(BaseModel):
-    city_id: int | None
+    city_id: int
     date_time: datetime | None
     temperature: float | None
 

@@ -19,9 +19,6 @@ session_maker = async_sessionmaker(
 )
 
 async def get_session():
-    async with engine.connect() as eng:
-        await eng.run_sync(Base.metadata.create_all)
-
     async with session_maker() as session:
         yield session
 
