@@ -1,10 +1,14 @@
 # City and Temperatures
 
+#### I use FreeWeatherAPI for update weather
+#### Temperature can be None
+
 ## Before start, do this steps
 ````
 1. Clone repository
 2. Create Environment
 3. Install all requirements
+4. pip install -r requirements.txt
 ````
 
 ## Now you`re ready
