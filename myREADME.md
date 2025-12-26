@@ -1,7 +1,15 @@
 # City and Temperatures
 
-#### I use FreeWeatherAPI for update weather
-#### Temperature can be None
+```
+I use FreeWeatherAPI for update weather,
+also func get_temp can return None, be careful
+```
+
+```commandline
+All CRUD opetaions moved to Cities_Rep and Temps_Tep
+which require only Session
+```
+
 
 ## Before start, do this steps
 ````

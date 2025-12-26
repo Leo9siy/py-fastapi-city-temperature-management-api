@@ -3,8 +3,7 @@ from typing import Annotated, List, Optional
 from fastapi import APIRouter, Depends, Query
 
 from repositories.temps_rep import TempRepository, get_rep
-from schemas.cities_schema import CityListSchema
-from schemas.temps_schema import TempListSchema, TempSchema
+from schemas.temps_schema import TempListSchema
 
 temps_router = APIRouter()
 temp_tep_dep = Annotated[TempRepository, Depends(get_rep)]
